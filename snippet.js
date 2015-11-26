@@ -12,6 +12,8 @@ var snippet = {
             msg = msg.join();
         } else if (typeof msg === "object") {
             msg = msg === null ? "null" : JSON.stringify(msg);
+        } else {
+            msg = String(msg);
         }
         elm.appendChild(document.createTextNode(msg));
         document.body.appendChild(elm);
